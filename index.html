@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+ </head>
+ <body>
+ 	<div id='myid' class='myclass'> test</div>
+ 	<button id="myButton">MyButton</button>
+   <div id='timer'></div>
+   <script type="text/javascript">
+   var myButton = document.getElementById('myButton');
+   /*myButton.onclick = function() {
+      console.log('click');
+      var id = setTimeout(function(){
+      	console.log('end time 2');
+      },2000);
+      setTimeout(function(){
+      	console.log('end time 1');
+      	clearTimeout(id);
+      },1000); */
+      var time = 0;
+      var timer = document.getElementById('timer');
+      timer.innerHTML = time;
+      setInterval(function(){
+      	time = time + 1;
+      	timer.innerHTML = time;
+      	console.log('interval');
+      },1000)
+      myButton.onclick = function() {
+      	clearInterval(id);
+      }
+
+
+      
+
+   
+   
+   </script>
+
+ </body>
+</html>
